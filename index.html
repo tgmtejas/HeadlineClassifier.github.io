@@ -62,20 +62,25 @@
     <ul class="navbar-nav ml-auto">
          
      <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#abstract">Abstract</a>
+              <a class="nav-link js-scroll-trigger" href="#abstract">Goal</a>
        
      </li>
          
      <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#introduction">Introduction</a>
+              <a class="nav-link js-scroll-trigger" href="#introduction">Methodology</a>
      
      </li>
-      
+ 
      <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#references">References</a>
+              <a class="nav-link js-scroll-trigger" href="#result">Result & Conclusion</a>
+       
+     </li>     
+     <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#references">Bibliography</a>
        
      </li>
-          
+
+               
     </ul>
         
    </div>
@@ -131,18 +136,13 @@
      
      <div class="col-lg-8 mx-auto">
       
-      <h2>Abstract</h2>
+      <h2>Goal</h2>
        
-       <p>Crap It is taken :P Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+       <p align>Design a text classifier to classify newspaper headlines into 4 groups <br>Business,health,entertainment,science</p>
      
-       <p>This theme features stock photos by
-              <a href="http://gratisography.com/">Gratisography</a>
-              along with a custom Google Maps skin courtesy of
-              <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
+       <p align>Evaluate the performance of the multi-class classifier</p>
       
-       <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
-     
+          
      </div>
       
      </div>
@@ -161,11 +161,18 @@
     
     <div class="col-lg-8 mx-auto">
     
-      <h2>Introduction</h2>
-     
-        <p>You can download Grayscale for free on the preview page at Start Bootstrap.</p>
-     
-         <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">Visit Download Page</a>
+      <h2>Methodology</h2>
+ 
+        <h6 align="Left">Feature selection:</h6>     
+        <p align="justify">The vocabulary for the news classifier should carefully be selected as the performance is sensitive to this. For this project, the document frequency metric  was used for feature selection.</p>
+
+
+        <h6 align="Left">Train the naive Bayes classifier:</h6>
+        <p align="justify">The filter is multivariate Bernoulli and the conditional probability given the class for each feature in the dictionary is calculated. This is obtained using maximum likelihood estimate for Bernoulli random variable.</p>
+
+        <h6 align="Left">Evaluate:</h6>
+        <p align="justify"> Performance metric for multi-class classifier are used. They are based on the confusion matrix and involve and different metrics such as precision,accuracy and recall are computed.</p>       
+         <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">View Code</a>
    
      </div>
    
@@ -173,6 +180,24 @@
   
      </section>
 
+
+
+<!-- result Section -->
+  
+  <section id="result" class="download-section content-section text-center">
+   
+   <div class="container">
+    
+    <div class="col-lg-8 mx-auto">
+    
+      <h2>Result & Conclusion</h2>
+     
+        <p align="justify"> The classifier performs well despite the naive Bayes assumption.A classification accuracy of 90% was achieved.<br> The confusion matrix revealed the various misclassification and allowed us to compute the additional metrics.</p>  
+     </div>
+   
+     </div>
+  
+     </section>
  
 
    <!-- References Section -->
@@ -185,51 +210,18 @@
     
       <div class="col-lg-8 mx-auto">
       
-      <h2>References</h2>
+      <h2>Bibliography</h2>
        
-      <p>Feel free to leave us a comment on the
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
-              on Start Bootstrap to give some feedback about this theme!</p>
+      <p align="justify">
+
+         [1] Xu Y., Wang B., Li J., Jing H. (2008) An Extended Document Frequency Metric for Feature Selection in Text Categorization. In: Li H., Liu T., Ma WY., Sakai T., Wong KF., Zhou G. (eds) Information Retrieval Technology. AIRS 2008. Lecture Notes in Computer Science, vol 4993. Springer, Berlin, Heidelberg <br>  
+         [2] Dumais, S.T., Platt, J., Heckerman, D., Sahami, M.: Inductive learning algorithms and representations for text categorization. In: Proceedings of CIKM 1998, pp. 148 155 (1998)<br>
+         [3] Li, Y.H., Jain, A.K.: Classification of text documents. Comput. J. 41(8), 537 546 (1998) <br>
+         [4] B. Tang, S. Kay, H. He, "Toward Optimal Feature Selection in Naive Bayes for Text Categorization", IEEE Transactions on Knowledge and Data Engineering, vol. 28, no. 9, pp. 2508-2521, 2016
+
+      </p>
      
-       <ul class="list-inline banner-social-buttons">
        
-       <li class="list-inline-item">
-         
-         <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
-                  <i class="fa fa-twitter fa-fw"></i>
-        
-          <span class="network-name">Twitter</span>
-       
-         </a>
-      
-        </li>
-     
-       <li class="list-inline-item">
-         
-       <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
-        
-          <i class="fa fa-github fa-fw">
-          </i>
-        
-          <span class="network-name">Github</span>
-        
-       </a>
-         
-       </li>
-       
-     <li class="list-inline-item">
-         
-       <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
-        
-          <i class="fa fa-google-plus fa-fw"></i>
-         
-         <span class="network-name">Google+</span>
-       
-         </a>
-       
-       </li>
-      
-      </ul>
      
      </div>
     
@@ -240,13 +232,7 @@
   </section>
 
   
-  
-<!-- Map Section -->
-  
-  <div id="map">
-  </div>
 
-  
 
   <!-- Footer -->
   
