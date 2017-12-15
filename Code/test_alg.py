@@ -19,22 +19,22 @@ def classify(cleaned_headline,p_vocabulary_given_m,p_vocabulary_given_t,p_vocabu
         if i in p_vocabulary_given_b:
             log_p_b += np.log(p_vocabulary_given_b[i])
         else:
-            log_p_b += (np.log(1.0/(float(total_b)+vocabulary_l))) 
+            log_p_b += (np.log(1.0/(float(total_b)+ 52867)))
             
         if i in p_vocabulary_given_t:
             log_p_t += np.log(p_vocabulary_given_t[i])
         else:
-            log_p_t += (np.log(1.0/(float(total_t)+vocabulary_l))) 
+            log_p_t += (np.log(1.0/(float(total_t)+ 52867)))
             
         if i in p_vocabulary_given_e:
             log_p_e += np.log(p_vocabulary_given_e[i])
         else:
-            log_p_e += (np.log(1.0/(float(total_e)+vocabulary_l))) 
+            log_p_e += (np.log(1.0/(float(total_e)+ 52867)))
             
         if i in p_vocabulary_given_m:
             log_p_m += np.log(p_vocabulary_given_m[i])
         else:
-            log_p_m += (np.log(1.0/(float(total_m)+vocabulary_l))) 
+            log_p_m += (np.log(1.0/(float(total_m)+52867)))
             
     log_p_b += np.log(total_b/total_data)
     log_p_t += np.log(total_t/total_data)
@@ -99,33 +99,11 @@ for i in f:
     c = classify(words_cleaned_stopwords,p_vocabulary_given_m,p_vocabulary_given_t,p_vocabulary_given_e,p_vocabulary_given_b,
                  total_b,total_t, total_m,total_e)
     
-    '''if temp_list[4]=='b' and c=='b':
-        count_correct_b += 1
-    if temp_list[4]=='e' and c=='e':
-        count_correct_e += 1    
-    if temp_list[4]=='t' and c=='t':
-        count_correct_t += 1        
-    if temp_list[4]=='m' and c=='m':
-        count_correct_m += 1
-
-    if temp_list[4]=='b':
-        count_total_b += 1
-    if temp_list[4]=='t':
-        count_total_t += 1
-    if temp_list[4]=='e':
-        count_total_e += 1
-    if temp_list[4]=='m':
-        count_total_m += 1'''
-    
     total_count += 1
 
     confusion_matrix[class_to_int[temp_list[4]]][class_to_int[c]] += 1
     
     if (total_count%1000)==0:
-        '''print "|",count_correct_b,count_correct_t,count_correct_e,count_correct_m,"|", \
-              count_total_b,count_total_t,count_total_e,count_total_m,"---",\
-              float((count_correct_b+count_correct_t+count_correct_e+count_correct_m)/\
-                    float(count_total_b+count_total_t+count_total_e+count_total_m))'''
         print(confusion_matrix)
         total_count = 0
 

@@ -86,41 +86,6 @@ vocabulary = b_word_asc[:2000] + e_word_asc[:2000] + t_word_asc[:2000] + m_word_
 
 count = 0
 
-'''for i in t_word_asc:
-    if i not in m_word_asc[:3000] and i not in e_word_asc[:3000] and i not in b_word_asc[:3000]:
-        t_vocabulary.append(i)
-        count += 1
-    if count>=2500:
-        break
-
-count = 0
-
-for i in m_word_asc:
-    if i not in t_word_asc[:3000] and i not in e_word_asc[:3000] and i not in b_word_asc[:3000]:
-        m_vocabulary.append(i)
-        count += 1
-    if count>=2500:
-        break
-
-count = 0
-
-for i in e_word_asc:
-    if i not in t_word_asc[:3000] and i not in m_word_asc[:3000] and i not in b_word_asc[:3000]:
-        e_vocabulary.append(i)
-        count += 1
-    if count>=2500:
-        break
-
-count = 0
-
-for i in b_word_asc:
-    if i not in m_word_asc[:3000] and i not in e_word_asc[:3000] and i not in t_word_asc[:3000]:
-        b_vocabulary.append(i)
-        count += 1
-    if count>=2500:
-        break
-'''
-
 p_vocabulary_given_b = {}
 p_vocabulary_given_t = {}
 p_vocabulary_given_m = {}
@@ -148,16 +113,6 @@ for i in vocabulary:
         p_vocabulary_given_m[i] = float(stats_words_m[i] + 1)/(float(total_m) + float(len(vocabulary)))
     else:
         p_vocabulary_given_m[i] = (1.0)/(float(total_m) + float(len(vocabulary)))
-
-'''for i in t_vocabulary:
-    p_word_given_t[i] = float(stats_words_t[i] + 1)/(float(total_t) + 4.0*(len(t_vocabulary)))
-
-for i in e_vocabulary:
-    p_word_given_e[i] = float(stats_words_e[i] + 1)/(float(total_e) + 4.0*(len(e_vocabulary)))
-
-for i in m_vocabulary:
-    p_word_given_m[i] = float(stats_words_m[i] + 1)/(float(total_m) + 4.0*(len(m_vocabulary)))
-'''
 
 
 	
